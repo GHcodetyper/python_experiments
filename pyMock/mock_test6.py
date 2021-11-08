@@ -11,4 +11,4 @@ mock.attribute.method(10, x=53)
 print(mock.mock_calls)
 
 expected = [call.method(), call.attribute.method(10, x=53)]
-assert mock.mock_calls == expected
+print(mock.mock_calls == expected)
