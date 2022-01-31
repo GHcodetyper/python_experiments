@@ -1,0 +1,91 @@
+winpty docker run --rm -it -p 5432:5432 postgres:10
+Unable to find image 'postgres:10' locally
+10: Pulling from library/postgres
+1cb79db8a9e7: Pull complete
+f6bae7873dd7: Pull complete
+8f7722dc50a7: Pull complete
+e8622b8cb6f3: Pull complete
+d6d74bba3a57: Pull complete
+874d4d2a09fd: Pull complete
+2d87c3a4038c: Pull complete
+c63ad59a7dc5: Pull complete
+e552f8007751: Pull complete
+2ebc2d1bc399: Pull complete
+eed0e00d10e2: Pull complete
+f7e2065268c3: Pull complete
+42c532a1b382: Pull complete
+55f90792e411: Pull complete
+Digest: sha256:15d933c1a8f5d907280507da66bc741ffb30bd789f407ba04368c2f82b86c526
+Status: Downloaded newer image for postgres:10
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+
+
+
+-----------------------------------
+
+
+winpty docker run --rm -it -p 5432:5432 -e POSTGRES_PASSWORD=password postgres:10
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default timezone ... Etc/UTC
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+WARNING: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2022-01-31 20:27:39.102 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-01-31 20:27:39.124 UTC [50] LOG:  database system was shut down at 2022-01-31 20:27:38 UTC
+2022-01-31 20:27:39.131 UTC [49] LOG:  database system is ready to accept connections
+ done
+server started
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2022-01-31 20:27:39.275 UTC [49] LOG:  received fast shutdown request
+.2022-01-31 20:27:39.280 UTC [49] LOG:  aborting any active transactions
+2022-01-31 20:27:39.283 UTC [49] LOG:  worker process: logical replication launcher (PID 56) exited with exit code 1
+2022-01-31 20:27:39.283 UTC [51] LOG:  shutting down
+2022-01-31 20:27:39.314 UTC [49] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2022-01-31 20:27:39.396 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-01-31 20:27:39.396 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-01-31 20:27:39.404 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-01-31 20:27:39.432 UTC [68] LOG:  database system was shut down at 2022-01-31 20:27:39 UTC
+2022-01-31 20:27:39.441 UTC [1] LOG:  database system is ready to accept connections
+^C2022-01-31 20:27:56.137 UTC [1] LOG:  received fast shutdown request
+2022-01-31 20:27:56.143 UTC [1] LOG:  aborting any active transactions
+2022-01-31 20:27:56.145 UTC [1] LOG:  worker process: logical replication launcher (PID 74) exited with exit code 1
+2022-01-31 20:27:56.145 UTC [69] LOG:  shutting down
+2022-01-31 20:27:56.179 UTC [1] LOG:  database system is shut down
