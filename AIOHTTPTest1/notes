@@ -98,7 +98,7 @@ PostgreSQL init process complete; ready for start up.
 
 (aiohttptest1) PS C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\polls> py aiohttpdemo_polls\main.py
 unhandled exception during asyncio.run() shutdown
-task: <Task finished name='Task-1' coro=<_run_app() done, defined at C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiohttp\web.py:287> exception=NotImplementedError()>
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiohttp\web.py:287> exception=NotImplementedError()> 
 Traceback (most recent call last):
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiohttp\web.py", line 514, in run_app
     loop.run_until_complete(main_task)
@@ -116,7 +116,7 @@ Traceback (most recent call last):
     await receiver(*args, **kwargs)  # type: ignore
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiohttp\web_app.py", line 539, in _on_startup
     await it.__anext__()
-  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\polls\aiohttpdemo_polls\db.py", line 33, in pg_context
+  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\polls\aiohttpdemo_polls\db.py", line 35, in pg_context
     engine = await aiopg.sa.create_engine(
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\sa\engine.py", line 94, in _create_engine
     pool = await aiopg.create_pool(
@@ -150,7 +150,7 @@ Traceback (most recent call last):
     await receiver(*args, **kwargs)  # type: ignore
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiohttp\web_app.py", line 539, in _on_startup
     await it.__anext__()
-  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\polls\aiohttpdemo_polls\db.py", line 33, in pg_context
+  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\polls\aiohttpdemo_polls\db.py", line 35, in pg_context
     engine = await aiopg.sa.create_engine(
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\sa\engine.py", line 94, in _create_engine
     pool = await aiopg.create_pool(
@@ -160,12 +160,11 @@ Traceback (most recent call last):
     conn = await connect(
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\connection.py", line 65, in connect
     connection = Connection(
-  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\connection.py", line 772, in __init__
-    self._loop.add_reader(
-  File "C:\Users\codec\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 501, in add_reader
+  File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-pac line 501, in add_reader
+ line 501, in add_reader
     raise NotImplementedError
 NotImplementedError
-Exception ignored in: <function Connection.__del__ at 0x000002740CCF78B0>
+Exception ignored in: <function Connection.__del__ at 0x0000016C93A5C160>
 Traceback (most recent call last):
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\connection.py", line 1188, in __del__
   File "C:\Users\codec\Documents\_MY_\git\gh_ghcodetyper\python_experiments\AIOHTTPTest1\.envs\aiohttptest1\lib\site-packages\aiopg\connection.py", line 995, in close
