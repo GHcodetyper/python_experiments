@@ -1,11 +1,18 @@
 # aiohttpdemo_polls/main.py
 
+import sys, os
+sys.path.insert(0, '.envs/aiohttptest1/Lib/site-packages/') # the 'DomainApiClient' dir
+print (sys.path)
+
+#----
 
 import sys
 import asyncio
 
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
+#----    
 
 from aiohttp import web
 

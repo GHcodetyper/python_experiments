@@ -1,0 +1,9 @@
+{
+    "python.autoComplete.extraPaths": [
+        ".envs/aiohttptest1/Lib/site-packages/"
+    ],
+    "python.analysis.extraPaths": [
+        ".envs/aiohttptest1/Lib/site-packages/"
+    ],
+    "python.envFile": "${workspaceFolder}/.envs/aiohttptest1",
+}
