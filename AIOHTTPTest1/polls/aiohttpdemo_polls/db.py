@@ -5,6 +5,8 @@ from sqlalchemy import (
     Integer, String, Date
 )
 
+__all__ = ['question', 'choice']
+
 meta = MetaData()
 
 question = Table(
