@@ -1,7 +1,8 @@
-# aiohttpdemo_polls/main.py
+# aiohttpdemo_polls\\main.py
 
 import sys, os
-sys.path.insert(0, '.envs/aiohttptest1/Lib/site-packages/') # the 'DomainApiClient' dir
+#sys.path.insert(0, '.envs\\aiohttptest1\\Lib\\site-packages\\')
+sys.path.insert(0, "c:\\Users\\codec\\Documents\\_MY_\\git\\gh_ghcodetyper\\python_experiments\\AIOHTTPTest1\\.envs\\aiohttptest1\\Lib\\site-packages\\")
 print (sys.path)
 
 #----
